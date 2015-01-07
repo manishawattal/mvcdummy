@@ -1,0 +1,39 @@
+﻿@model MvcApplication1.Eligibile
+
+@{
+    ViewBag.Title = "elgibility";
+}
+
+<h2>elgibility</h2>
+<div>@using (Html.BeginForm("elgibility","home",FormMethod.Post))
+     {
+
+    <p>Name: @Html.TextBox("name")</p>
+    <p>Your Age Limit:@Html.DropDownList("Age limit",new []{
+                     new SelectListItem()
+                     {
+                         Text="below 18",
+                         Value=bool.TrueString
+                     },
+                     new SelectListItem()
+                     {
+                         Text="above 18",
+                         Value=bool.FalseString
+                         
+                     }
+                 },"please select the age")</p>
+
+        
+        <input id="Button1" type="submit" value="submit" />          
+                     
+                     
+                     
+                 
+    
+
+
+
+
+
+     }    
+</div>
